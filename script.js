@@ -77,7 +77,7 @@ function setCrazyEventListener(){
 
 function getCrazy(){
     var checkbox = document.getElementById("purple-toggler");
-    fi (checkbox.checked){
+    if (checkbox.checked){
         $console.log("getting crazy");
     }
     setPicByIndex(2);
