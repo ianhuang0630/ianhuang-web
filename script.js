@@ -44,7 +44,7 @@ function cryptorender(element, timestep, groundtruth){
     }
 }
 function setPicByIndex(index){
-    var img = document.getElementById("propic1");
+    var img = document.getElementsByClassName("propic")[0];
     img.src = `profile_pic${index}.jpg`;
     img.id  = `propic${index}`;
 }
@@ -78,12 +78,20 @@ function setCrazyEventListener(){
 function getCrazy(){
     var checkbox = document.getElementById("purple-toggler");
     if (checkbox.checked){
-        $console.log("getting crazy");
+        console.log("getting crazy");
+        setPicByIndex(2);
+        var purplebeats = document.getElementById("purple_audio")
+        purplebeats.currentTime=0;
+        purplebeats.play();
+        // disco
+        var bkColor = document.body.style.backgroundColor;
+        flashPurple(0, bkColor);
+        // disc
     }
-    setPicByIndex(2);
-    document.getElementById("purple_audio").play();
-    var bkColor = document.body.style.backgroundColor;
-    flashPurple(0, bkColor);
+    else{
+        console.log("calming down");
+        document.getElementById("purple_audio").pause();
+    }
 }
 
 function flashPurple(counter, bkColor){
@@ -96,6 +104,7 @@ function flashPurple(counter, bkColor){
     }
     else{
         document.body.style.background = bkColor;
+        setPicByIndex(1);
     }
 }
 
