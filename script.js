@@ -80,16 +80,20 @@ function getCrazy(){
     if (checkbox.checked){
         console.log("getting crazy");
         setPicByIndex(2);
-        var purplebeats = document.getElementById("purple_audio")
+        
+        var purplebeats = document.getElementById("purple_audio"); 
         purplebeats.currentTime=0;
         purplebeats.play();
         // disco
         var bkColor = document.body.style.backgroundColor;
         flashPurple(0, bkColor);
         // disc
+        document.getElementsByClassName("img-frame")[0].classList.add("twirl");
     }
     else{
         console.log("calming down");
+        document.getElementsByClassName("img-frame")[0].classList.remove("twirl");
+        //document.getElementsByClass("img-frame")[0].setAttribute("animation", "rotation 2s infinite linear;");
         document.getElementById("purple_audio").pause();
     }
 }

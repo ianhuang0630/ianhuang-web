@@ -17,6 +17,7 @@ body{
     background-color: #262626;/* #6B7A8F ;/*#282828; */
     color: #fff;
     font-family: "Source Code Pro";
+    margin-top: 60px;
 }
 ::selection{
     background-color: #afd275;
@@ -63,6 +64,10 @@ h2{
     margin: 12px;
 }
 
+.twirl{
+   animation: rotation 6s infinite linear; 
+}
+
 /* image-specific changes */
 #propic1{
     display: block; 
@@ -74,6 +79,7 @@ h2{
     min-height: 700px;
     transform: translate(-25%, -22%);
 }
+
 #propic2{
     display: block; 
     margin-left: auto;
@@ -84,6 +90,16 @@ h2{
     min-height: 400px;
     transform: translate(-22%, -25%);
 }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
+
 .tabs{
     margin: 12px;
     text-align:center; 
@@ -131,10 +147,9 @@ h2{
     margin-top:0 ;
 }
 
-
 .funk{
     position: absolute; 
-    top: 10px; 
+    bottom: 50px; 
     left: 20px;
 }
 .dark-mode-toggler input[type="checkbox"] {
@@ -146,7 +161,7 @@ h2{
   display: block;
   height: 26px;
   width: 60px;
-  background: #fff;
+  background: #6B7A8F; 
   border: 2px solid #000;
   border-radius: 15px;
   position: absolute;
@@ -167,7 +182,7 @@ h2{
   transition: all 0.4s ease-in;
 }
 .dark-mode-toggler input[type="checkbox"]:checked + label::before {
-  background: #fff;
+  background: #6B7A8F; 
   border: 2px solid #000;
 }
 .dark-mode-toggler input[type="checkbox"]:checked + label::after {
@@ -175,4 +190,15 @@ h2{
   background: #8510d8;
   border: 2px solid #000;
   transition: all 0.4s ease-in;
+}
+#pseudowarning{
+    position: relative;
+    left: 70px;
+    bottom: -6px;
+}
+#warning{
+    position: relative;
+    left: 70px;
+    bottom: -20px;
+    font-size: 13px;
 }
