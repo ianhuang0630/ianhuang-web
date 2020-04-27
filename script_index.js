@@ -109,6 +109,7 @@ function flashPurple(counter, bkColor){
     else{
         document.body.style.background = bkColor;
         setPicByIndex(1);
+        document.getElementsByClassName("img-frame")[0].classList.remove("twirl");
     }
 }
 
