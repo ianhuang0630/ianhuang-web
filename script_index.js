@@ -1,4 +1,3 @@
-
 function main(){
     renderHeaders();
     hide_biolong();
@@ -21,7 +20,7 @@ function renderHeaders(){
     var groundtruth3 = element3.innerHTML;
     cryptorender(element3, 0, groundtruth3);
 }
-
+/*
 function cryptorender(element, timestep, groundtruth){
     if (timestep < 6){
         var ascii_low = 174;
@@ -43,6 +42,7 @@ function cryptorender(element, timestep, groundtruth){
         element.innerHTML=groundtruth;
     }
 }
+*/
 function setPicByIndex(index){
     var img = document.getElementsByClassName("propic")[0];
     img.src = `profile_pic${index}.jpg`;
