@@ -36,13 +36,6 @@
    animation: rotation 6s infinite linear; 
 }
 
-.photo_creds{
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
-    font-size: 12px;
-}
-
 /* image-specific changes */
 #propic1{
     display: block; 
@@ -75,7 +68,7 @@
   }
 }
 
-#longer{
+.longer{
 	background-color: #1d1e22; 
     border: 2px solid #e0474c;
     color: #e0474c;
@@ -87,6 +80,19 @@
     font-size: 16px;   
     border-radius: 5px;
 }
+
+.biolong{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+
+.hide{
+    display:none;
+}
+
 .columbiablue{
     color:#A6B7C8; 
 }
@@ -101,10 +107,16 @@
 }
 
 .funk{
-    position: absolute; 
-    bottom: 50px; 
-    left: 20px;
+    position: relative; 
+    top: 100px; 
 }
+.photo_creds{
+    position: relative;
+    top: 100px;
+    text-align:right;
+    font-size: 12px;
+}
+
 .crazy-mode-toggler input[type="checkbox"] {
   display: none;
 }
@@ -151,7 +163,6 @@
 }
 #warning{
     position: relative;
-    left: 70px;
     bottom: -20px;
     font-size: 13px;
 }

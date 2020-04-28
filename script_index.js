@@ -1,6 +1,6 @@
 function main(){
     renderHeaders();
-    hide_biolong();
+    // hide_biolong();
     setPicByIndex(1);
     //setRandomProfilePic();
     setBioEventListener();
@@ -57,19 +57,19 @@ function setRandomProfilePic(){
 }
 
 function setBioEventListener(){
-    document.getElementById("longer").addEventListener("click", bioElongator);
+    document.getElementsByClassName("longer")[0].addEventListener("click", bioElongator);
 }
 
 function bioElongator(){
     console.log("Button pressed!");
     // minimize 
-    document.getElementById("longer").style.display="none";
-    document.getElementById("biolong").style.display="block";
+    document.getElementsByClassName("longer")[0].classList.add("hide");
+    document.getElementsByClassName("biolong")[0].classList.add("show");
 }
 
-function hide_biolong(){
-    document.getElementById("biolong").style.display="none";
-}
+//function hide_biolong(){
+//    document.getElementById("biolong").style.display="none";
+//}
 
 function setCrazyEventListener(){
     document.getElementById("purple-toggler").addEventListener("change", getCrazy);
