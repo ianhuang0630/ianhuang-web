@@ -17,6 +17,8 @@
     /*background: green; /* debugging */*/
     padding: 5px;
     margin: 12px;
+    align-items:center;
+    justify-content:center;
 }
 
 .img-frame{
@@ -32,6 +34,13 @@
 
 .twirl{
    animation: rotation 6s infinite linear; 
+}
+
+.photo_creds{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 12px;
 }
 
 /* image-specific changes */
